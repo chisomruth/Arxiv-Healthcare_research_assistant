@@ -20,6 +20,8 @@ import fitz  # PyMuPDF for PDF text extraction
 from fpdf import FPDF  # For generating PDF files
 
 # Initialize Streamlit app
+
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 st.set_page_config(page_title="Arxiv AI in Healthcare Copilot", layout="wide")
 
 # Custom Header for Branding
