@@ -186,16 +186,16 @@ pprint(result[0].page_content)
 
 
  """
-import arxiv
-import requests
-import os
-import yaml
-from dotenv import load_dotenv
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from langchain_community.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.chat_models import ChatOpenAI
+import requests
+import os
+import yaml
+import arxiv
+from dotenv import load_dotenv
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pprint import pprint
 import fitz  # PyMuPDF for PDF text extraction
 
