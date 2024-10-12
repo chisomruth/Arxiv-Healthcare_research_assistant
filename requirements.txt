@@ -383,3 +383,5 @@ youtube-transcript-api==0.6.2
 zipp==3.18.1
 # zlib==1.2.13
 # zstd==1.5.5
+PyMuPDF
+PyPDF2
