@@ -385,3 +385,4 @@ zipp==3.18.1
 # zstd==1.5.5
 PyMuPDF==1.21.1
 PyPDF2
+fpdf==1.7.2
