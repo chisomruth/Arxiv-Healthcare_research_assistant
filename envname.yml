@@ -1,0 +1,4 @@
+name: chisom_chibuike_sail
+channels:
+  - defaults
+prefix: /opt/anaconda3/envs/chisom_chibuike_sail
