@@ -49,15 +49,18 @@ dependencies:
       - langchain-community==0.0.34
       - streamlit==1.33.0
       - pypdf==4.2.0
+      - PyMuPDF==1.21.1
       - google-api-python-client 
       - pytube==15.0.0
       - youtube-transcript-api==0.6.2 
       - PyYAML==6.0.1
       - chromadb==0.5.0
+      - streamlit
       - watchdog
       - h2o==3.46.0.1
       - quarto==0.1.0 # Make sure to download quarto CLI at https://quarto.org/docs/get-started/
       - sqlalchemy==2.0.29
+      - fpdf==1.7.2
       
 
 

@@ -190,6 +190,7 @@ import arxiv
 import requests
 import os
 import yaml
+from dotenv import load_dotenv
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from langchain_community.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -199,7 +200,8 @@ from pprint import pprint
 import fitz  # PyMuPDF for PDF text extraction
 
 # Load credentials
-OPENAI_API_KEY = yaml.safe_load(open('credentials.yml'))['openai']
+load_dotenv()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Setup paths
 pdf_directory = "Data/ai_healthcare_papers"

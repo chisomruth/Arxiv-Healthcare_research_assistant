@@ -5,6 +5,7 @@
 
 # Imports 
 import streamlit as st
+from dotenv import load_dotenv
 import yaml
 import os
 from langchain_community.vectorstores import Chroma
@@ -26,14 +27,14 @@ st.markdown(
     """
     <div style="text-align:center; margin-bottom:20px;">
         <h1>🤖 AI in Healthcare Research Assistant</h1>
-        <h4>Your companion for AI and healthcare research writing</h4>
     </div>
     """,
     unsafe_allow_html=True
 )
 
 # Load the API Key securely
-OPENAI_API_KEY = yaml.safe_load(open('credentials.yml'))['openai']
+load_dotenv()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Initialize session state for message history
 if "langchain_messages" not in st.session_state:
@@ -128,6 +129,8 @@ def create_rag_chain(api_key):
         Add subsections and categorize it into sections based on the user prompt. \
         Use the provided context to write a detailed response. \
         Add references and citations while writing. \
+        Make sure you add refferences and citations to the generated research document. \
+        Add them using the 
         Use bullet points if necessary. \
         Add a conclusion at the end of the document. \
         Use as many words as needed to make it comprehensive. \
@@ -204,10 +207,3 @@ with st.expander("🔍 View Message History"):
     st.write("Message history initialized with `langchain_messages`:")
     st.json(st.session_state.langchain_messages)
 
-# Citation Example Usage
-""" if question:
-    # For demonstration, format a sample citation
-    sample_citation_apa = format_citation("Smith, J.", "A Study on AI in Healthcare", "2023", style='APA')
-    sample_citation_mla = format_citation("Smith, J.", "A Study on AI in Healthcare", "2023", style='MLA')
-    st.write(f"Formatted Citation Example (APA): {sample_citation_apa}")
-    st.write(f"Formatted Citation Example (MLA): {sample_citation_mla}") """
