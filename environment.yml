@@ -60,6 +60,7 @@ dependencies:
       - h2o==3.46.0.1
       - quarto==0.1.0 # Make sure to download quarto CLI at https://quarto.org/docs/get-started/
       - sqlalchemy==2.0.29
+      - fpdf==1.7.2
       
 
 
